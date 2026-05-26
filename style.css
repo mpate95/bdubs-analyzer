@@ -19,12 +19,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: clip;
 }
 
 body {
     min-height: 100vh;
     font-family: "IBM Plex Sans", sans-serif;
     color: var(--ink);
+    overflow-x: clip;
     background:
         radial-gradient(circle at top left, rgba(255, 208, 132, 0.85), transparent 28%),
         radial-gradient(circle at right 20%, rgba(196, 77, 33, 0.17), transparent 22%),
@@ -47,6 +49,7 @@ body::before {
     position: relative;
     z-index: 1;
     width: min(100% - 20px, 1200px);
+    max-width: 100%;
     margin: 0 auto;
     padding: 18px 0 calc(28px + env(safe-area-inset-bottom, 0px));
 }
@@ -66,6 +69,7 @@ body::before {
     border-radius: 24px;
     box-shadow: var(--shadow);
     backdrop-filter: blur(16px);
+    overflow: clip;
 }
 
 .hero-copy {
@@ -96,6 +100,7 @@ h3 {
     font-family: "Archivo Black", sans-serif;
     line-height: 0.95;
     text-transform: uppercase;
+    overflow-wrap: anywhere;
 }
 
 h1 {
@@ -139,6 +144,7 @@ h1 {
     margin-top: 12px;
     color: rgba(255, 244, 231, 0.76);
     line-height: 1.5;
+    overflow-wrap: anywhere;
 }
 
 .scoreboard-grid {
@@ -193,6 +199,9 @@ h2 {
 }
 
 .oracle-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     min-height: 210px;
     padding: 18px;
     border-radius: 20px;
@@ -221,6 +230,7 @@ h2 {
     line-height: 0.95;
     text-transform: uppercase;
     text-wrap: balance;
+    overflow-wrap: anywhere;
 }
 
 .oracle-answer.reveal {
@@ -231,9 +241,11 @@ h2 {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     margin-top: 12px;
     font-size: 0.92rem;
     color: var(--muted);
+    row-gap: 4px;
 }
 
 .confidence-row strong {
@@ -347,6 +359,7 @@ h3 {
     padding-left: 18px;
     position: relative;
     line-height: 1.55;
+    overflow-wrap: anywhere;
 }
 
 .signal-list li::before {
@@ -376,6 +389,7 @@ h3 {
     margin-top: 18px;
     font-size: 1.05rem;
     line-height: 1.7;
+    overflow-wrap: anywhere;
 }
 
 .quote-source {
@@ -410,17 +424,19 @@ h3 {
     }
 
     h1 {
-        font-size: clamp(2.15rem, 13vw, 3.3rem);
+        font-size: clamp(1.95rem, 12vw, 3rem);
         margin-top: 10px;
+        line-height: 0.92;
     }
 
     h2 {
-        font-size: clamp(1.55rem, 8.5vw, 2.2rem);
+        font-size: clamp(1.35rem, 7.4vw, 1.95rem);
+        line-height: 0.94;
     }
 
     h3 {
-        font-size: 1.2rem;
-        line-height: 1.02;
+        font-size: 1.08rem;
+        line-height: 1.04;
     }
 
     .scoreboard-panel,
@@ -445,16 +461,17 @@ h3 {
     }
 
     .oracle-screen {
-        min-height: 176px;
+        min-height: 164px;
         padding: 16px;
         border-radius: 18px;
     }
 
     .oracle-answer {
-        min-height: 104px;
+        min-height: 88px;
         margin-top: 12px;
-        font-size: clamp(1.55rem, 9.5vw, 2.4rem);
-        line-height: 1;
+        font-size: clamp(1.25rem, 7.5vw, 1.9rem);
+        line-height: 0.98;
+        align-items: flex-start;
     }
 
     .confidence-row {
@@ -478,6 +495,7 @@ h3 {
 
     .identity-question {
         font-size: 0.92rem;
+        line-height: 1.02;
     }
 
     .identity-button {
