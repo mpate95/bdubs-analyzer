@@ -322,6 +322,10 @@ h2 {
     gap: 18px;
 }
 
+.sidebar-stack > * {
+    min-width: 0;
+}
+
 .info-card {
     padding: 22px;
 }
@@ -376,6 +380,124 @@ h3 {
 
 .quote-source {
     margin-top: 18px;
+}
+
+@media (max-width: 540px) {
+    .page-shell {
+        width: calc(100% - 16px);
+        padding-top: 12px;
+        padding-bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .hero,
+    .main-grid,
+    .sidebar-stack {
+        gap: 14px;
+    }
+
+    .hero-copy,
+    .scoreboard,
+    .predictor-card,
+    .info-card {
+        border-radius: 20px;
+    }
+
+    .hero-copy,
+    .scoreboard,
+    .predictor-card,
+    .info-card {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: clamp(2.15rem, 13vw, 3.3rem);
+        margin-top: 10px;
+    }
+
+    h2 {
+        font-size: clamp(1.55rem, 8.5vw, 2.2rem);
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        line-height: 1.02;
+    }
+
+    .scoreboard-panel,
+    .stat-card {
+        padding: 14px;
+    }
+
+    .panel-value,
+    .stat-value {
+        font-size: 1.7rem;
+    }
+
+    .panel-note,
+    .signal-list,
+    .quote {
+        font-size: 0.94rem;
+        line-height: 1.55;
+    }
+
+    .oracle {
+        margin-top: 16px;
+    }
+
+    .oracle-screen {
+        min-height: 176px;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .oracle-answer {
+        min-height: 104px;
+        margin-top: 12px;
+        font-size: clamp(1.55rem, 9.5vw, 2.4rem);
+        line-height: 1;
+    }
+
+    .confidence-row {
+        gap: 6px;
+        font-size: 0.84rem;
+    }
+
+    .predict-button {
+        margin-top: 16px;
+        min-height: 56px;
+        padding: 16px 18px;
+        font-size: 0.92rem;
+        letter-spacing: 0.04em;
+    }
+
+    .identity-prompt {
+        margin-top: 12px;
+        padding: 14px;
+        border-radius: 18px;
+    }
+
+    .identity-question {
+        font-size: 0.92rem;
+    }
+
+    .identity-button {
+        min-height: 48px;
+        font-size: 0.86rem;
+    }
+
+    .signal-list {
+        gap: 10px;
+        margin-top: 16px;
+    }
+
+    .quote {
+        margin-top: 14px;
+    }
+
+    .quote-source {
+        margin-top: 14px;
+        letter-spacing: 0.14em;
+    }
 }
 
 @keyframes flicker-up {
