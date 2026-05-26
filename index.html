@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#c44d21">
+    <title>Will Ronak Come to BDubs?</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-shell">
+        <header class="hero">
+            <div class="hero-copy">
+                <p class="eyebrow">Weekly Attendance Forecast</p>
+                <h1>Will Ronak Come to BDubs?</h1>
+                <p class="lede">
+                    Powered by nextgen stats.
+                </p>
+            </div>
+
+            <aside class="scoreboard" aria-label="Fake Ronak attendance metrics">
+                <div class="scoreboard-panel">
+                    <p class="panel-label">Current Forecast</p>
+                    <p class="panel-value panel-value-hot">2.1% chance</p>
+                    <p class="panel-note">Model drift caused by one text that said "maybe."</p>
+                </div>
+                <div class="scoreboard-grid">
+                    <article class="stat-card">
+                        <p class="stat-value" data-target="284">0</p>
+                        <p class="stat-label">Invites Sent</p>
+                    </article>
+                    <article class="stat-card">
+                        <p class="stat-value" data-target="281">0</p>
+                        <p class="stat-label">Polite Declines</p>
+                    </article>
+                    <article class="stat-card">
+                        <p class="stat-value" data-target="17">0</p>
+                        <p class="stat-label">Suspicious "Maybes"</p>
+                    </article>
+                    <article class="stat-card">
+                        <p class="stat-value stat-percent" data-target="99.3">0%</p>
+                        <p class="stat-label">No Confidence</p>
+                    </article>
+                </div>
+            </aside>
+        </header>
+
+        <main class="main-grid">
+            <section class="predictor-card">
+                <div class="card-heading">
+                    <p class="section-tag">Simulation Engine</p>
+                    <h2>Run this week's attendance check</h2>
+                </div>
+
+                <div class="oracle" aria-live="polite">
+                    <div class="oracle-screen">
+                        <p class="oracle-status" id="oracleStatus">System idle</p>
+                        <p class="oracle-answer" id="oracleAnswer">Awaiting weekly disappointment.</p>
+                    </div>
+                    <div class="confidence-row">
+                        <span>Confidence</span>
+                        <strong id="confidenceValue">99.3%</strong>
+                    </div>
+                </div>
+
+                <button class="predict-button" id="predictButton" type="button">
+                    Will He Attend?
+                </button>
+
+                <div class="identity-prompt" id="identityPrompt" hidden>
+                    <p class="identity-question">Is Shiboom Asking?</p>
+                    <div class="identity-actions">
+                        <button class="identity-button" id="shiboomYes" type="button">Yes</button>
+                        <button class="identity-button identity-button-no" id="shiboomNo" type="button">No</button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="sidebar-stack">
+                <article class="info-card">
+                    <p class="section-tag">Latest Data Pull</p>
+                    <h3>Reasons the model remains bearish</h3>
+                    <ul class="signal-list">
+                        <li>Historical attendance chart remains emotionally unavailable.</li>
+                        <li>Previous "I'll let you know" events resolved exactly how you'd expect.</li>
+                        <li>Game-time enthusiasm failed to clear the minimum threshold.</li>
+                    </ul>
+                </article>
+
+                <article class="info-card accent-card">
+                    <p class="section-tag">Expert Consensus</p>
+                    <h3>This is basically a no-index</h3>
+                    <p class="quote">
+                        "At this point we're not predicting attendance. We're measuring the shape
+                        of the refusal."
+                    </p>
+                    <p class="quote-source">Independent BDubs Research Desk</p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
